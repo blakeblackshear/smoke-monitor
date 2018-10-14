@@ -1,0 +1,6 @@
+{
+  "terminal.integrated.env.osx": {
+    "PATH": "/Users/blake/.platformio/penv/bin:/Users/blake/.platformio/penv:/Users/blake/.rvm/gems/ruby-2.5.1/bin:/Users/blake/.rvm/gems/ruby-2.5.1@global/bin:/Users/blake/.rvm/rubies/ruby-2.5.1/bin:/usr/local/opt/node@8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/blake/bin:/usr/local/share/npm/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin:/Users/blake/source/go/bin:/usr/local/opt/go/libexec/bin:/Users/blake/.rvm/bin",
+    "PLATFORMIO_CALLER": "vscode"
+  }
+}
