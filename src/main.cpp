@@ -55,6 +55,7 @@ void setup_web_server()
 void send_status() {
   client.publish(SMOKE_STATUS_TOPIC, smokeMonitor.is_smoke_detected() ? "ON" : "OFF", true);
   client.publish(CO_STATUS_TOPIC, smokeMonitor.is_co_detected() ? "ON" : "OFF", true);
+  client.publish(ALARM_STATUS_TOPIC, smokeMonitor.is_alarm_on() ? "ON" : "OFF", true);
 }
 
 void handle_mqtt_message(char* topic, byte* payload, unsigned int length) {

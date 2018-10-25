@@ -6,5 +6,6 @@
 
 #define SMOKE_STATUS_TOPIC        "house/smoke/status"
 #define CO_STATUS_TOPIC           "house/co/status"
-#define ALARM_CONTROL_TOPIC       "house/smoke/set"
+#define ALARM_STATUS_TOPIC        "house/alarm/status"
+#define ALARM_CONTROL_TOPIC       "house/alarm/set"
 #define AVAILABILITY_TOPIC        "house/smoke/available"

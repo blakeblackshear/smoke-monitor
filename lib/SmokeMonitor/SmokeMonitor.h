@@ -18,8 +18,13 @@ class SmokeMonitor
         int _smoke_pin;
         int _co_pin;
         int _alarm_pin;
-        bool _smoke_status;
-        bool _co_status;
+        unsigned long _smoke_start;
+        unsigned long _co_start;
+        bool _smoke_pin_status;
+        bool _co_pin_status;
+        bool _smoke_alarm_on;
+        bool _co_alarm_on;
+        bool _manual_alarm_on;
         void (*callback)();
         void handle_change();
 };
