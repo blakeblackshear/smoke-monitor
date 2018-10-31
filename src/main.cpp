@@ -85,7 +85,9 @@ void reconnect_mqtt() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
     // Attempt to connect
-    if (client.connect("smoke_monitor", AVAILABILITY_TOPIC, 1, true, "offline")) {
+    char mqtt_client_id[20];
+    itoa(ESP.getChipId(),mqtt_client_id,10);
+    if (client.connect(mqtt_client_id, AVAILABILITY_TOPIC, 1, true, "offline")) {
       Serial.println("connected");
       client.subscribe(ALARM_CONTROL_TOPIC);
       client.publish(AVAILABILITY_TOPIC, "online", true);
@@ -151,8 +153,7 @@ void loop()
 {
   server.handleClient();
   smokeMonitor.update();
-  if (!client.connected()) {
+  if(!client.loop()){
     reconnect_mqtt();
   }
-  client.loop();
 }
